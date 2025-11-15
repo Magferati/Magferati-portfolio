@@ -453,3 +453,106 @@ ul li a:hover {
     color: #1f1f38;
     background-color: #da7fa8;
 }
+/* --- Responsive For Mobile Devices --- */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    #navbar ul {
+        display: none;
+    }
+
+    .checkBtn {
+        display: block;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+        padding: 1rem;
+    }
+
+    #check:checked ~ ul {
+        display: block;
+        background: #2c2c6c;
+        padding: 1rem 0;
+    }
+
+    #navbar ul li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    /* Home Section */
+    .home-left,
+    .home-right {
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .home-left h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-left h4,
+    .home-left h6 {
+        font-size: 2rem;
+    }
+
+    .home-right img {
+        width: 80%;
+        height: auto;
+        position: static;
+        margin: auto;
+    }
+
+    /* About Section */
+    .about-left,
+    .about-right {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .about-left img {
+        height: auto;
+    }
+
+    /* Skills Section */
+    .skills-left,
+    .skills-right {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .skills-left img {
+        width: 100%;
+    }
+
+    /* Projects */
+    .projects-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .projects-item {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    /* Contact Section */
+    .form {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .form-div input,
+    textarea {
+        width: 100%;
+    }
+
+    /* Footer */
+    #footer ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
