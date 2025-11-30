@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu:wght@300;500;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu:wght@300;500;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@500&family=Ubuntu:wght@300;500;700&display=swap');
 
 body {
@@ -122,7 +122,6 @@ h4 {
     width: 100%;
     height: 400px;;
     border-radius: 1rem;
-    
 }
 
 .about-content p {
@@ -140,9 +139,7 @@ h4 {
 }
 
 .skills-left img {
-    width: 70%;
-    border-radius: 1rem;
-    
+    width: 85%;
 }
 
 .skills-right {
@@ -236,10 +233,13 @@ h4 {
     margin: auto;
     flex-wrap: wrap;
 }
-
-
-
-
+.projects-item {
+    width: 320px;     
+    min-height: 450px; 
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+}
 .projects-item {
     overflow: hidden;
     width: 20rem;
@@ -340,6 +340,7 @@ ul li a:hover {
 
 
 
+
 /* Utility Classes */
 .poppins {
     font-family: 'Poppins', sans-serif;
@@ -401,7 +402,10 @@ ul li a:hover {
 .m-b-1 {
     margin-bottom: 1rem;
 }
-
+.fa-x-twitter {
+    font-weight: 900 !important;
+    font-size: 1.3rem !important;
+}
 .w-50 {
     width: 50%;
 }
@@ -452,4 +456,67 @@ ul li a:hover {
 .live {
     color: #1f1f38;
     background-color: #da7fa8;
+}
+.home-left,
+.home-right {
+    width: 30%;   /* too small on phone */
+    padding: 7rem;
+}
+@media (max-width: 768px) {
+    .home-left,
+    .home-right,
+    .about-left,
+    .about-right,
+    .skills-left,
+    .skills-right {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .home-right img {
+        width: 80%;
+        height: auto;
+        position: relative; /* remove absolute */
+        left: 0;
+        top: 0;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.home-right img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto;
+}
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #navbar ul li {
+        margin: 0.5rem 0;
+    }
+}
+@media (max-width: 768px) {
+    .projects-container,
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
