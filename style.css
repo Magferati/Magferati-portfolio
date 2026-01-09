@@ -227,6 +227,9 @@ h4 {
 
 
 /* Projects Section */
+#Projects {
+    padding: 5rem 0;   /* top & bottom space */
+}
 .projects-container {
     display: flex;
     justify-content: center;
@@ -565,7 +568,7 @@ img {
 }
 /* Typing Animation Cursor */
 #typing::after {
-    content: "Backend Engineer";
+    content: "|";
     margin-left: 4px;
     animation: blink 0.8s steps(1) infinite;
 }
@@ -578,40 +581,36 @@ img {
         opacity: 0;
     }
 }
-/* Hamburger icon hidden on desktop */
+/* ===== Mobile Menu ===== */
 #menu-toggle {
     display: none;
 }
 
-/* Mobile styling */
 @media (max-width: 768px) {
     #menu-toggle {
-        display: block; /* show hamburger */
+        display: block;
+    }
+
+    #navbar {
+        position: relative;
     }
 
     #navbar-ul {
         position: absolute;
-        top: 100%; /* just below navbar */
-        left: -100%; /* hide menu initially */
+        top: 100%;
+        left: -100%;
         width: 100%;
-        background-color: #1f1f38;
+        background: #1f1f38;
         flex-direction: column;
         align-items: center;
-        padding: 1rem 0;
-        transition: 0.3s;
-        z-index: 99;
+        transition: 0.3s ease;
     }
 
     #navbar-ul.active {
-        left: 0; /* slide in when active */
+        left: 0;
     }
 
     #navbar-ul li {
         margin: 1rem 0;
-    }
-
-    /* Optional: add a smooth slide transition */
-    #navbar-ul li a {
-        font-size: 1.2rem;
     }
 }
